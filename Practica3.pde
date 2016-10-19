@@ -1,10 +1,11 @@
 color c = color(0);
 float x = 0;
-float y = 100;
-float speed = 1;
+float y = 0;
+float xspeed = 1;
+float yspeed = 1;
 
 void setup() {
-  size(600,800);
+  size(600,600);
 }
 
 void draw() {
@@ -14,12 +15,12 @@ void draw() {
 }
 
 void move() {
-  x = x + speed;
+  x = x + xspeed;
   if (x > width) {
     x = 0;
   }
   
-  y = y + speed; speed = speed * 1.01;
+  y = y + yspeed; yspeed = yspeed * 1.005;
   if (y > width) {
     y = 0;
   }
